@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class AgendaDaoImpl implements AgendaDao{
+public class AgendaDaoImpl implements AgendaDao2 {
 
     @Autowired
-    AgendaJpaSpring agenda;
+    AgendaDao agenda;
 
     @Override
     public void agregarContacto(Contacto contacto) {
@@ -25,7 +25,7 @@ public class AgendaDaoImpl implements AgendaDao{
 
     @Override
     public void eliminarContacto(String email) {
-        agenda.eliminarPorEmail(email);
+        agenda.deleteByEmail(email);
     }
 
     @Override
@@ -34,13 +34,13 @@ public class AgendaDaoImpl implements AgendaDao{
     }
 
     @Override
-    public void eliminarContacto(int idContacto) {
-        agenda.deleteById(idContacto);
+    public void eliminarContacto(int id) {
+        agenda.deleteById(id);
     }
 
     @Override
-    public Contacto recuperarContacto(int idContacto) {
-        return agenda.findById(idContacto).orElse(null);
+    public Contacto recuperarContacto(int id) {
+        return agenda.findById(id).orElse(null);
     }
 
     @Override

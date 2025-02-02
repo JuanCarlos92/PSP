@@ -7,7 +7,9 @@ import java.util.List;
 public interface AgendaService {
     boolean agregarContacto(Contacto contacto);
     List<Contacto> recuperarContactos();
-    void actualizarContacto(Contacto contacto);
-    boolean eliminarContacto(int idcontacto);
-    Contacto buscarContacto(int idcontacto);
+    boolean actualizarContacto(Contacto contacto);
+    boolean eliminarContacto(int id);
+    Contacto buscarContacto(int id);
+    Contacto buscarPorEmail(String email);
+    boolean eliminarContactoPorEmail(String email);
 }

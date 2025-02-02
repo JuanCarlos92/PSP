@@ -4,19 +4,14 @@ import org.juancarlos.micro_contactos.model.Contacto;
 
 import java.util.List;
 
-public interface AgendaDao {
+
+public interface AgendaDao2 {
 
     void agregarContacto(Contacto contacto);
-
     Contacto recuperarContacto(String email);
-
     void eliminarContacto(String email);
-
     List<Contacto> devolverContactos();
-
     void eliminarContacto(int idContacto);
-
     Contacto recuperarContacto(int idContacto);
-
     void actualizarContacto(Contacto contacto);
 }
