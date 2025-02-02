@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface AgendaJpaSpring extends JpaRepository<Contacto, Integer> {
     Contacto findByEmail(String email);
+
     @Transactional
     @Modifying
     @Query("Delete from Contacto c Where c.email=?1")

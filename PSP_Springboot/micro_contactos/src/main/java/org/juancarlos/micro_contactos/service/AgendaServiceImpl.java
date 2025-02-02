@@ -2,18 +2,17 @@ package org.juancarlos.micro_contactos.service;
 
 import org.juancarlos.micro_contactos.dao.AgendaDao;
 import org.juancarlos.micro_contactos.model.Contacto;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AgendaServiceImpl implements AgendaService{
 
-    private final AgendaDao dao;
+    @Autowired
+    private AgendaDao dao;
 
-    // Constructor para inyectar la dependencia
-    //@Autowired
-    public AgendaServiceImpl(AgendaDao dao) {   //Para evitar el uso de @Autowired y hacer el objeto dao inmutable
-        this.dao = dao;
-    }
 
     @Override
     public boolean agregarContacto(Contacto contacto) {
@@ -27,6 +26,7 @@ public class AgendaServiceImpl implements AgendaService{
 
     @Override
     public List<Contacto> recuperarContactos() {
+
         return dao.devolverContactos();
     }
 
@@ -49,6 +49,7 @@ public class AgendaServiceImpl implements AgendaService{
 
     @Override
     public Contacto buscarContacto(int idcontacto) {
+
         return dao.recuperarContacto(idcontacto);
     }
 }

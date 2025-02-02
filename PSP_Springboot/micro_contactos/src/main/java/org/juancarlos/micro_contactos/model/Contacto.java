@@ -21,34 +21,42 @@ public class Contacto {
 
 
     public int getIdContacto() {
+
         return idContacto;
     }
 
     public void setIdContacto(int id) {
+
         this.idContacto = id;
     }
 
     public String getNombre() {
+
         return nombre;
     }
 
     public void setNombre(String nombre) {
+
         this.nombre = nombre;
     }
 
     public String getEmail() {
+
         return email;
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 
     public int getEdad() {
+
         return edad;
     }
 
     public void setEdad(int edad) {
+
         this.edad = edad;
     }
 
