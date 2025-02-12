@@ -1,4 +1,4 @@
-package com.contactos.microservicio_contactos;
+package org.juancarlos.micro_contactos_securizado;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,7 +44,6 @@ public class SecurityConfig {
 	ds.setPassword("root");
 	return ds;
 	}
-
 
     //la siguiente configuración será para el caso de usuarios en una base de datos
     @Bean

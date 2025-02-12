@@ -1,11 +1,10 @@
-package com.contactos.microservicio_contactos.controller;
+package com.contactos.pruebasmicroservicio_contactos_securizado.controller;
 
-import com.contactos.microservicio_contactos.model.Contacto;
-import com.contactos.microservicio_contactos.service.AgendaService;
+import com.contactos.pruebasmicroservicio_contactos_securizado.model.Contacto;
+import com.contactos.pruebasmicroservicio_contactos_securizado.service.AgendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

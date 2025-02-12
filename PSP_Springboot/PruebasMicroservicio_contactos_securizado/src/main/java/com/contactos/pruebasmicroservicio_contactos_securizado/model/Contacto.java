@@ -1,4 +1,4 @@
-package com.contactos.microservicio_contactos.model;
+package com.contactos.pruebasmicroservicio_contactos_securizado.model;
 
 import jakarta.persistence.*;
 

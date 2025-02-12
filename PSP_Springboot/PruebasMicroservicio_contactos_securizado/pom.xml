@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.contactos</groupId>
-	<artifactId>Microservicio_contactos</artifactId>
+	<artifactId>PruebasMicroservicio_contactos_securizado</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>04Microservicio_contactos_securizado</name>
 	<description>04Microservicio_contactos securizado</description>

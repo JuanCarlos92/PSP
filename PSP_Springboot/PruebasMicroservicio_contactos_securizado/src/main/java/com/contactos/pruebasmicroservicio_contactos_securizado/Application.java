@@ -1,4 +1,4 @@
-package com.contactos.microservicio_contactos;
+package com.contactos.pruebasmicroservicio_contactos_securizado;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.contactos.microservicio_contactos.service;
+package com.contactos.pruebasmicroservicio_contactos_securizado.service;
 
-import com.contactos.microservicio_contactos.dao.AgendaDao;
-import com.contactos.microservicio_contactos.model.Contacto;
+import com.contactos.pruebasmicroservicio_contactos_securizado.dao.AgendaDao;
+import com.contactos.pruebasmicroservicio_contactos_securizado.model.Contacto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

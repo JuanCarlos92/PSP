@@ -1,4 +1,4 @@
-package com.contactos.microservicio_contactos;
+package com.contactos.pruebasmicroservicio_contactos_securizado;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

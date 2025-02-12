@@ -1,6 +1,6 @@
-package com.contactos.microservicio_contactos.dao;
+package com.contactos.pruebasmicroservicio_contactos_securizado.dao;
 
-import com.contactos.microservicio_contactos.model.Contacto;
+import com.contactos.pruebasmicroservicio_contactos_securizado.model.Contacto;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

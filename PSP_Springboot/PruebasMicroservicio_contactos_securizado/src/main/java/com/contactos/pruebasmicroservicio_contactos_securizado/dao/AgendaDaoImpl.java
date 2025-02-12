@@ -1,6 +1,6 @@
-package com.contactos.microservicio_contactos.dao;
+package com.contactos.pruebasmicroservicio_contactos_securizado.dao;
 
-import com.contactos.microservicio_contactos.model.Contacto;
+import com.contactos.pruebasmicroservicio_contactos_securizado.model.Contacto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
