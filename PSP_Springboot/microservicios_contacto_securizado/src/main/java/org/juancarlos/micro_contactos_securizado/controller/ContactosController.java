@@ -1,7 +1,7 @@
-package org.juancarlos.micro_contactos.controller;
+package org.juancarlos.micro_contactos_securizado.controller;
 
-import org.juancarlos.micro_contactos.model.Contacto;
-import org.juancarlos.micro_contactos.service.AgendaService;
+import org.juancarlos.micro_contactos_securizado.model.Contacto;
+import org.juancarlos.micro_contactos_securizado.service.AgendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +17,7 @@ public class ContactosController {
     @GetMapping
     public List<Contacto> recuperarContactos() {
         return service.recuperarContactos();
+
     }
 
     @GetMapping("/{id}")
