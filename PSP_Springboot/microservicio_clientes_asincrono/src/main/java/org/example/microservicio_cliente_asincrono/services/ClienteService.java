@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public interface ClienteService {
-    CompletableFuture<List<Persona>> servicioCompletableFuture(Persona persona);
+    CompletableFuture<List<Persona>> llamadaServicio(Persona persona);
 
 }

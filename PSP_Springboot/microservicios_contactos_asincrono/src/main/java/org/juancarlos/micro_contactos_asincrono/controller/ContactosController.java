@@ -3,6 +3,9 @@ package org.juancarlos.micro_contactos_asincrono.controller;
 import org.juancarlos.micro_contactos_asincrono.model.Contacto;
 import org.juancarlos.micro_contactos_asincrono.service.AgendaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,9 +18,24 @@ public class ContactosController {
     private AgendaService service;
 
     @GetMapping
-    public List<Contacto> recuperarContactos() {
+    public ResponseEntity<List<Contacto>> recuperarContactos() {
+        // Llamada al servicio para obtener la lista de contactos
+        List<Contacto> contactos = service.recuperarContactos();
+        // Creación de un objeto HttpHeaders para añadir encabezados personalizados
+        HttpHeaders headers = new HttpHeaders();
+        // Añadir un encabezado con el número total de contactos
+        headers.add("total", String.valueOf(contactos.size()));
+        System.out.println(headers.get("total"));
 
-        return service.recuperarContactos();
+        try{
+            System.out.println("Esperando...");
+            Thread.sleep(5000);
+            System.out.println("Finalizado.");
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        // Devolver una respuesta HTTP con la lista de contactos, los encabezados y un estado HTTP 200 (OK)
+        return new ResponseEntity<>(contactos, headers, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

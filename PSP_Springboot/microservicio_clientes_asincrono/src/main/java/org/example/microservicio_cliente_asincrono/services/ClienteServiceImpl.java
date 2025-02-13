@@ -18,11 +18,11 @@ public class ClienteServiceImpl implements ClienteService {
 
     public String url = "http://localhost:8080";
 
-    @Async
     @Override
-    public CompletableFuture<List<Persona>> servicioCompletableFuture(Persona persona) {
-        restTemplate.postForLocation(url+"/contactos", persona);
-        Persona[] personas=restTemplate.getForObject(url+"/contactos", Persona[].class);
+    @Async
+    public CompletableFuture<List<Persona>> llamadaServicio(Persona persona) {
+        restTemplate.postForLocation(url + "/contactos/contacto", persona);
+        Persona[] personas = restTemplate.getForObject(url + "/contactos", Persona[].class);
         return CompletableFuture.completedFuture(Arrays.asList(personas));
     }
 }
