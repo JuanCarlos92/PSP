@@ -25,6 +25,15 @@ public class ContactosController {
         HttpHeaders headers = new HttpHeaders();
         // Añadir un encabezado con el número total de contactos
         headers.add("total", String.valueOf(contactos.size()));
+        System.out.println(headers.get("total"));
+
+        try{
+            System.out.println("Esperando...");
+            Thread.sleep(5000);
+            System.out.println("Finalizado.");
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         // Devolver una respuesta HTTP con la lista de contactos, los encabezados y un estado HTTP 200 (OK)
         return new ResponseEntity<>(contactos, headers, HttpStatus.OK);
 
